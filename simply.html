@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Responsive Website</title>
+    <!-- Favicon link: Replace 'favicon.ico' with your actual favicon file and type -->
+    <link rel="icon" href="https://placehold.co/32x32/ff0000/ffffff?text=F" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">Beauty Of Nature </div>
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#features">Features</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero-section">
+            <img src="photomain.jpg" alt="Beautiful landscape" class="hero-image">
+            <div class="hero-content">
+                <h1>Explore the Beauty of Nature</h1>
+                <p>Discover stunning landscapes and breathtaking views.</p>
+                <button class="cta-button">Learn More</button>
+            </div>
+        </section>
+
+        <section id="features" class="features-section">
+            <h2>Our Features</h2>
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <img src="main.jpg" alt="Feature 1" class="feature-image">
+                    <h3>Stunning Views</h3>
+                    <p>Immerse yourself in picturesque scenery.</p>
+                </div>
+                <div class="feature-item">
+                    <img src="photo1.jpg" alt="Feature 2" class="feature-image">
+                    <h3>Adventure Awaits</h3>
+                    <p>Experience thrilling outdoor activities.</p>
+                </div>
+                <div class="feature-item">
+                    <img src="photo2.jpg" alt="Feature 3" class="feature-image">
+                    <h3>Serene Retreats</h3>
+                    <p>Find peace and tranquility in nature.</p>
+                </div>
+                <div class="feature-item">
+                    <img src="ste.jpg" alt="Feature 4" class="feature-image">
+                    <h3>Unique Experiences</h3>
+                    <p>Create unforgettable memories.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery" class="gallery-section">
+            <h2>Image Gallery</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="main.jpg" alt="Gallery Image 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="photo1.jpg" alt="Gallery Image 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="photo2.jpg" alt="Gallery Image 3">
+                </div>
+                <div class="gallery-item">
+                    <img src="ste.jpg" alt="Gallery Image 4">
+                </div>
+                 <div class="gallery-item">
+                    <img src="photomain.jpg" alt="Gallery Image 5">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://placehold.co/600x400/cccccc/000000?text=Placeholder+Image" alt="Gallery Image 6">
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <h2>Contact Us</h2>
+            <form class="contact-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" rows="5"></textarea>
+                <button type="submit" class="cta-button">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 My Responsive Website. All rights reserved.</p>
+        <div class="social-links">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navbar = document.querySelector('.navbar');
+
+        menuToggle.addEventListener('click', () => {
+            navbar.classList.toggle('active');
+        });
+
+        // Close navbar when a link is clicked (for mobile)
+        document.querySelectorAll('.navbar a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (navbar.classList.contains('active')) {
+                    navbar.classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
